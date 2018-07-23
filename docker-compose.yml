@@ -1,0 +1,10 @@
+version: '2'
+services:
+  docker-node:
+    build: .
+    command: npm run dev
+    container_name: docker-node
+    volumes:
+      - .:/usr/app
+    ports:
+      - '8080:8080'
