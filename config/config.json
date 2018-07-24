@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "pgtest",
+    "password": "mysecretpassword",
+    "database": "postgres-test",
+    "host": "postgres",
+    "dialect": "postgres"
+  }
+}
