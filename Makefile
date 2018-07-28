@@ -8,8 +8,11 @@ CONTAINER=docker-node
 # Clean removes all generated artifacts
 
 # Generate and install artifacts
-database: 
+migrate: 
 	docker exec -it $(CONTAINER) node_modules/.bin/sequelize db:migrate
 
 migration:
-		docker exec -it $(CONTAINER) node_modules/.bin/sequelize model:generate
+	docker exec -it $(CONTAINER) node_modules/.bin/sequelize model:generate
+
+revert_migration:
+	docker exec -it $(CONTAINER) node_modules/.bin/sequelize db:migrate:undo
